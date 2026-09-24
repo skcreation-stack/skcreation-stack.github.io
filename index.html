@@ -398,6 +398,18 @@
     .project:hover .site-thumb img{transform:scale(1.025)}
     .site-thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.10),transparent 35%);pointer-events:none}
 
+  
+    .industry-chip{transition:.25s ease}
+    .industry-chip:hover{background:var(--accent);border-color:var(--accent);color:var(--cream);transform:translateY(-1px)}
+    .industry-subhead{scroll-margin-top:96px;margin:58px 0 24px;padding-top:28px;border-top:1px solid var(--line)}
+    .industry-subhead h3{font-family:"Cormorant Garamond",serif;font-size:clamp(2.7rem,4vw,4rem);line-height:.95;letter-spacing:-.04em;font-weight:500;margin:8px 0 10px}
+    .industry-subhead p{max-width:720px;color:var(--muted);margin:0}
+    .medical-grid{margin-bottom:8px}
+    .medical-art{aspect-ratio:1;background:#f6f3ee;background-repeat:no-repeat;background-size:400% 300%}
+    .mp1{background-position:0% 0%}.mp2{background-position:33.333% 0%}.mp3{background-position:66.667% 0%}.mp4{background-position:100% 0%}
+    .mp5{background-position:0% 50%}.mp6{background-position:33.333% 50%}.mp7{background-position:66.667% 50%}.mp8{background-position:100% 50%}
+    .mp9{background-position:0% 100%}.mp10{background-position:33.333% 100%}.mp11{background-position:66.667% 100%}.mp12{background-position:100% 100%}
+
   </style>
 </head>
 <body id="top">
@@ -467,15 +479,28 @@
           <div class="eyebrow">Logo Portfolio</div>
           <div>
             <h2>Industry-focused identity design.</h2>
-            <p>Browse selected logo and identity work by industry. This collection highlights legal, law-firm, justice, and attorney brands.</p>
+            <p>Browse selected logo and identity work by industry, including legal, healthcare, medical, wellness, and specialist service brands.</p>
           </div>
         </div>
         <div class="industry-bar reveal">
           <span class="industry-label">Industries</span>
-          <span class="industry-chip">Legal &amp; Law</span>
+          <a class="industry-chip" href="#legal-logos">Legal &amp; Law</a>
+          <a class="industry-chip" href="#medical-logos">Medical &amp; Healthcare</a>
+        </div>
+        <div class="industry-subhead reveal" id="legal-logos">
+          <span class="eyebrow">Industry 01</span>
+          <h3>Legal &amp; Law</h3>
         </div>
         <div class="logo-grid">
           <figure class="logo-card reveal"><div class="logo-art lp1" role="img" aria-label="James River Law logo design"></div><figcaption><small>Legal & Law</small><strong>James River Law</strong></figcaption></figure><figure class="logo-card reveal"><div class="logo-art lp2" role="img" aria-label="Gordeev & Gordeev logo design"></div><figcaption><small>Legal & Law</small><strong>Gordeev & Gordeev</strong></figcaption></figure><figure class="logo-card reveal"><div class="logo-art lp3" role="img" aria-label="Böhni Rechtsanwälte logo design"></div><figcaption><small>Legal & Law</small><strong>Böhni Rechtsanwälte</strong></figcaption></figure><figure class="logo-card reveal"><div class="logo-art lp4" role="img" aria-label="Beschen Law PLLC logo design"></div><figcaption><small>Legal & Law</small><strong>Beschen Law PLLC</strong></figcaption></figure><figure class="logo-card reveal"><div class="logo-art lp5" role="img" aria-label="White Rock Social Justice Film Society logo design"></div><figcaption><small>Legal & Law</small><strong>White Rock Social Justice Film Society</strong></figcaption></figure><figure class="logo-card reveal"><div class="logo-art lp6" role="img" aria-label="Kletter.Law logo design"></div><figcaption><small>Legal & Law</small><strong>Kletter.Law</strong></figcaption></figure><figure class="logo-card reveal"><div class="logo-art lp7" role="img" aria-label="Derecho logo design"></div><figcaption><small>Legal & Law</small><strong>Derecho</strong></figcaption></figure><figure class="logo-card reveal"><div class="logo-art lp8" role="img" aria-label="Coal Harbour Law logo design"></div><figcaption><small>Legal & Law</small><strong>Coal Harbour Law</strong></figcaption></figure><figure class="logo-card reveal"><div class="logo-art lp9" role="img" aria-label="Calicon24 logo design"></div><figcaption><small>Legal & Law</small><strong>Calicon24</strong></figcaption></figure><figure class="logo-card reveal"><div class="logo-art lp10" role="img" aria-label="Lambert Law Offices logo design"></div><figcaption><small>Legal & Law</small><strong>Lambert Law Offices</strong></figcaption></figure><figure class="logo-card reveal"><div class="logo-art lp11" role="img" aria-label="Miller Weaver logo design"></div><figcaption><small>Legal & Law</small><strong>Miller Weaver</strong></figcaption></figure><figure class="logo-card reveal"><div class="logo-art lp12" role="img" aria-label="Carlsen Law Offices logo design"></div><figcaption><small>Legal & Law</small><strong>Carlsen Law Offices</strong></figcaption></figure><figure class="logo-card reveal"><div class="logo-art lp13" role="img" aria-label="Lioness Law logo design"></div><figcaption><small>Legal & Law</small><strong>Lioness Law</strong></figcaption></figure><figure class="logo-card reveal"><div class="logo-art lp14" role="img" aria-label="Hire Jared logo design"></div><figcaption><small>Legal & Law</small><strong>Hire Jared</strong></figcaption></figure><figure class="logo-card reveal"><div class="logo-art lp15" role="img" aria-label="Certified Court Reporters logo design"></div><figcaption><small>Legal & Law</small><strong>Certified Court Reporters</strong></figcaption></figure><figure class="logo-card reveal"><div class="logo-art lp16" role="img" aria-label="Mindful Injury Law logo design"></div><figcaption><small>Legal & Law</small><strong>Mindful Injury Law</strong></figcaption></figure><figure class="logo-card reveal"><div class="logo-art lp17" role="img" aria-label="Newcomb Law logo design"></div><figcaption><small>Legal & Law</small><strong>Newcomb Law</strong></figcaption></figure><figure class="logo-card reveal"><div class="logo-art lp18" role="img" aria-label="LegalNinja logo design"></div><figcaption><small>Legal & Law</small><strong>LegalNinja</strong></figcaption></figure>
+        </div>
+        <div class="industry-subhead reveal" id="medical-logos">
+          <span class="eyebrow">Industry 02</span>
+          <h3>Medical &amp; Healthcare</h3>
+          <p>Selected identity work for healthcare, diagnostics, clinics, medical services, wellness, and specialist brands.</p>
+        </div>
+        <div class="logo-grid medical-grid">
+          <figure class="logo-card reveal"><div class="medical-art mp1" role="img" aria-label="Pathology Watch logo design"></div><figcaption><small>Medical &amp; Healthcare</small><strong>Pathology Watch</strong></figcaption></figure><figure class="logo-card reveal"><div class="medical-art mp2" role="img" aria-label="LabCardeman logo design"></div><figcaption><small>Medical &amp; Healthcare</small><strong>LabCardeman</strong></figcaption></figure><figure class="logo-card reveal"><div class="medical-art mp3" role="img" aria-label="Open Recordings logo design"></div><figcaption><small>Medical &amp; Healthcare</small><strong>Open Recordings</strong></figcaption></figure><figure class="logo-card reveal"><div class="medical-art mp4" role="img" aria-label="Open Helix Health logo design"></div><figcaption><small>Medical &amp; Healthcare</small><strong>Open Helix Health</strong></figcaption></figure><figure class="logo-card reveal"><div class="medical-art mp5" role="img" aria-label="Medicinal Marijuana Clinic logo design"></div><figcaption><small>Medical &amp; Healthcare</small><strong>Medicinal Marijuana Clinic</strong></figcaption></figure><figure class="logo-card reveal"><div class="medical-art mp6" role="img" aria-label="Tester logo design"></div><figcaption><small>Medical &amp; Healthcare</small><strong>Tester</strong></figcaption></figure><figure class="logo-card reveal"><div class="medical-art mp7" role="img" aria-label="New Life Breastfeeding logo design"></div><figcaption><small>Medical &amp; Healthcare</small><strong>New Life Breastfeeding</strong></figcaption></figure><figure class="logo-card reveal"><div class="medical-art mp8" role="img" aria-label="TagDoctor logo design"></div><figcaption><small>Medical &amp; Healthcare</small><strong>TagDoctor</strong></figcaption></figure><figure class="logo-card reveal"><div class="medical-art mp9" role="img" aria-label="Sussex Audiology Services logo design"></div><figcaption><small>Medical &amp; Healthcare</small><strong>Sussex Audiology Services</strong></figcaption></figure><figure class="logo-card reveal"><div class="medical-art mp10" role="img" aria-label="Dr. Cusso logo design"></div><figcaption><small>Medical &amp; Healthcare</small><strong>Dr. Cusso</strong></figcaption></figure><figure class="logo-card reveal"><div class="medical-art mp11" role="img" aria-label="Wild Oasis Nutrition logo design"></div><figcaption><small>Medical &amp; Healthcare</small><strong>Wild Oasis Nutrition</strong></figcaption></figure><figure class="logo-card reveal"><div class="medical-art mp12" role="img" aria-label="Dr. Frank Health logo design"></div><figcaption><small>Medical &amp; Healthcare</small><strong>Dr. Frank Health</strong></figcaption></figure>
         </div>
       </div>
     </section>
@@ -648,6 +673,34 @@
         });
       }catch(err){
         console.error('Unable to load logo portfolio previews',err);
+      }
+    })();
+  </script>
+
+
+  <script>
+    (async function loadMedicalLogoSprite(){
+      try{
+        const partUrls=[
+          'assets/medical-logos.b64.part1','assets/medical-logos.b64.part2',
+          'assets/medical-logos.b64.part3','assets/medical-logos.b64.part4',
+          'assets/medical-logos.b64.part5','assets/medical-logos.b64.part6',
+          'assets/medical-logos.b64.part7'
+        ];
+        const parts=await Promise.all(partUrls.map(async url=>{
+          const response=await fetch(url,{cache:'no-store'});
+          if(!response.ok) throw new Error('Medical logo asset part failed: '+url);
+          return (await response.text()).replace(/[^A-Za-z0-9+/=]/g,'');
+        }));
+        const binary=atob(parts.join(''));
+        const bytes=new Uint8Array(binary.length);
+        for(let i=0;i<binary.length;i++) bytes[i]=binary.charCodeAt(i);
+        const blobUrl=URL.createObjectURL(new Blob([bytes],{type:'image/jpeg'}));
+        document.querySelectorAll('.medical-art').forEach(el=>{
+          el.style.backgroundImage='url("'+blobUrl+'")';
+        });
+      }catch(err){
+        console.error('Unable to load medical logo portfolio previews',err);
       }
     })();
   </script>
