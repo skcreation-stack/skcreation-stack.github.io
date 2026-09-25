@@ -23,10 +23,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Build logo image asset
+      - name: Build logo image assets
         run: |
           cat assets/law-logos.b64.part1 assets/law-logos.b64.part2 assets/law-logos.b64.part3 assets/law-logos.b64.part4 assets/law-logos.b64.part5 | base64 --decode > assets/law-logos.jpg
+          cat assets/law-hq.b64.part1 assets/law-hq.b64.part2 assets/law-hq.b64.part3 | base64 --decode > assets/law-logos-hq.webp
           file assets/law-logos.jpg
+          file assets/law-logos-hq.webp
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
