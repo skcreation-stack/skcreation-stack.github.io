@@ -381,7 +381,7 @@
     .logo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
     .logo-card{background:#fff;border:1px solid var(--line);overflow:hidden;transition:.3s ease}
     .logo-card:hover{transform:translateY(-5px);box-shadow:0 16px 38px rgba(21,20,17,.10)}
-    .logo-art{aspect-ratio:1;background-color:#f6f3ee;background-image:none;background-repeat:no-repeat;background-size:300% 600%}
+    .logo-art{aspect-ratio:1;background-color:#f6f3ee;background-image:url("assets/law-logos-hq.webp");background-repeat:no-repeat;background-size:300% 600%}
     .logo-card figcaption{padding:14px 16px 16px;border-top:1px solid var(--line)}
     .logo-card small{display:block;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:3px}
     .logo-card strong{font-family:"Cormorant Garamond",serif;font-size:1.25rem;font-weight:600}
@@ -429,7 +429,7 @@
       aspect-ratio:1;
       margin:24px auto;
       flex:0 0 auto;
-      background-image:none !important;
+      background-image:url("assets/law-logos-hq.webp") !important;
       background-size:300% 600% !important;
       background-repeat:no-repeat !important;
       background-color:#fff;
@@ -709,34 +709,5 @@
       }
     })();
   </script>
-
-
-  <script>
-    (async function loadLawLogoHQSprite(){
-      try{
-        const partUrls=[
-          'assets/law-hq.b64.part1',
-          'assets/law-hq.b64.part2',
-          'assets/law-hq.b64.part3'
-        ];
-        const parts=await Promise.all(partUrls.map(async url=>{
-          const response=await fetch(url,{cache:'no-store'});
-          if(!response.ok) throw new Error('Law HQ asset part failed: '+url);
-          return (await response.text()).replace(/[^A-Za-z0-9+/=]/g,'');
-        }));
-        const base64=parts.join('');
-        const binary=atob(base64);
-        const bytes=new Uint8Array(binary.length);
-        for(let i=0;i<binary.length;i++) bytes[i]=binary.charCodeAt(i);
-        const blobUrl=URL.createObjectURL(new Blob([bytes],{type:'image/webp'}));
-        document.querySelectorAll('#legal-logos + .logo-grid .logo-art').forEach(el=>{
-          el.style.setProperty('background-image','url("'+blobUrl+'")','important');
-        });
-      }catch(err){
-        console.error('Unable to load high-resolution law logo previews',err);
-      }
-    })();
-  </script>
-
 </body>
 </html>
