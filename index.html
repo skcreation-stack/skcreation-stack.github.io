@@ -381,7 +381,7 @@
     .logo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
     .logo-card{background:#fff;border:1px solid var(--line);overflow:hidden;transition:.3s ease}
     .logo-card:hover{transform:translateY(-5px);box-shadow:0 16px 38px rgba(21,20,17,.10)}
-    .logo-art{aspect-ratio:1;background-color:#f6f3ee;background-image:url("assets/law-logos.jpg");background-repeat:no-repeat;background-size:300% 600%}
+    .logo-art{aspect-ratio:1;background-color:#f6f3ee;background-image:url("assets/law-logos-hd.webp");background-repeat:no-repeat;background-size:300% 600%}
     .logo-card figcaption{padding:14px 16px 16px;border-top:1px solid var(--line)}
     .logo-card small{display:block;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:3px}
     .logo-card strong{font-family:"Cormorant Garamond",serif;font-size:1.25rem;font-weight:600}
@@ -424,12 +424,13 @@
     /* Keep Legal & Law previews at the sprite's native tile resolution so they stay crisp. */
     #legal-logos + .logo-grid .logo-card{display:flex;flex-direction:column}
     #legal-logos + .logo-grid .logo-art{
-      width:240px;
-      height:240px;
-      aspect-ratio:auto;
-      margin:34px auto;
+      width:min(100%,280px);
+      height:auto;
+      aspect-ratio:1;
+      margin:24px auto;
       flex:0 0 auto;
-      background-size:720px 1440px !important;
+      background-image:url("assets/law-logos-hd.webp") !important;
+      background-size:300% 600% !important;
       background-repeat:no-repeat !important;
       background-color:#fff;
       image-rendering:auto;
@@ -682,38 +683,7 @@
     },{threshold:.12});
     document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
   </script>
-
-  <script>
-    (async function loadLawLogoSprite(){
-      try{
-        const partUrls=[
-          'assets/law-logos.b64.part1',
-          'assets/law-logos.b64.part2',
-          'assets/law-logos.b64.part3',
-          'assets/law-logos.b64.part4',
-          'assets/law-logos.b64.part5'
-        ];
-        const parts=await Promise.all(partUrls.map(async url=>{
-          const response=await fetch(url,{cache:'no-store'});
-          if(!response.ok) throw new Error('Logo asset part failed: '+url);
-          return (await response.text()).replace(/[^A-Za-z0-9+/=]/g,'');
-        }));
-        const base64=parts.join('');
-        const binary=atob(base64);
-        const bytes=new Uint8Array(binary.length);
-        for(let i=0;i<binary.length;i++) bytes[i]=binary.charCodeAt(i);
-        const blobUrl=URL.createObjectURL(new Blob([bytes],{type:'image/jpeg'}));
-        document.querySelectorAll('.logo-art').forEach(el=>{
-          el.style.backgroundImage='url("'+blobUrl+'")';
-        });
-      }catch(err){
-        console.error('Unable to load logo portfolio previews',err);
-      }
-    })();
-  </script>
-
-
-  <script>
+<script>
     (async function loadMedicalLogoSprite(){
       try{
         const partUrls=[
